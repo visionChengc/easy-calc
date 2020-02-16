@@ -1,0 +1,45 @@
+{
+  "name": "cheng-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "build": {
+    "appId": "cheng",
+    "directories": {
+      "app": "./"
+    },
+    "productName": "chengのcalc",
+    "dmg": {
+      "icon": "./images/mac.icns",
+      "window": {
+        "x": "200",
+        "y": "150",
+        "width": 500,
+        "height": 400
+      }
+    },
+    "mac": {
+      "icon": "./images/mac.icns"
+    },
+    "win": {
+      "icon": "./images/icon.ico"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js",
+    "buildmac": "electron-builder --platform=mac --arch=x64",
+    "buildwin": "electron-builder --platform=win --arch=x64",
+    "packagewin": "electron-packager ./ cheng --platform=win32 --out=./dist --arch=x64 --app-version=1.0.0 --icon=./images/icon.ico --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^3.1.13",
+    "electron-builder": "^22.3.2",
+    "electron-packager": "^14.2.1",
+    "mathjs": "^6.6.0"
+  }
+}
